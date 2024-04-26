@@ -43,8 +43,7 @@
                         </th>
                         <td>
                             <a href="{{ $picture->picture->getUrl() }}" target="_blank">
-                                <img src="{{ $picture->picture->getUrl() }}" alt="{{ $picture->name }}" height="50" width="50">
-                                <strong>{{ $picture->name }}</strong>
+                                <img src="{{ $picture->picture->getUrl() }}" alt="{{ $picture->name }}" height="80" width="80">
                             </a>
                         </td>
                     </tr>

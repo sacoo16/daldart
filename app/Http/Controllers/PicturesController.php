@@ -45,7 +45,7 @@ class PicturesController extends Controller
 
     public function show(Picture $picture)
     {
-        $picture->load(['pictures']);
+        $picture->load(['album']);
 
         return view('pictures.show',compact('picture'));
     }
