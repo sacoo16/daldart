@@ -8,7 +8,7 @@
                         Home
                     </div>
                     <div class="card-body">
-                        <h2>Welcome , {{ auth()->user()->name }}</h2>
+                        <h2>Welcome , {{ auth()->user()->name ?? 'Guest' }}</h2>
                         <h5 class="text-center">
                             You can start by <a href="{{ route('albums.index') }}">Albums</a> , then add <a href="{{ route('pictures.index') }}">Pictures</a>
                         </h5>

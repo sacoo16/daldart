@@ -2,12 +2,12 @@
 @section('content')
     <div class="card">
         <div class="card-header">
-            Show Album | {{ $album->name }}
+            Show Picture | {{ $picture->name }}
         </div>
 
         <div class="card-body">
             <div class="form-group  py-2">
-                <a class="btn btn-secondary" href="{{ route('albums.index') }}">
+                <a class="btn btn-secondary" href="{{ route('pictures.index') }}">
                     Back To List
                 </a>
             </div>
@@ -18,7 +18,7 @@
                             ID
                         </th>
                         <td>
-                            {{ $album->id }}
+                            {{ $picture->id }}
                         </td>
                     </tr>
                     <tr>
@@ -26,13 +26,32 @@
                             Name
                         </th>
                         <td>
-                            {{ $album->name }}
+                            {{ $picture->name }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Album
+                        </th>
+                        <td>
+                            {{ $picture->album->name ?? '-' }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Picture
+                        </th>
+                        <td>
+                            <a href="{{ $picture->picture->getUrl() }}" target="_blank">
+                                <img src="{{ $picture->picture->getUrl() }}" alt="{{ $picture->name }}" height="50" width="50">
+                                <strong>{{ $picture->name }}</strong>
+                            </a>
                         </td>
                     </tr>
                 </tbody>
             </table>
             <div class="form-group">
-                <a class="btn btn-secondary" href="{{ route('albums.index') }}">
+                <a class="btn btn-secondary" href="{{ route('pictures.index') }}">
                     Back To List
                 </a>
             </div>
